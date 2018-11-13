@@ -39,7 +39,7 @@
   font-size: 2em;   /* 2em = 2 x 10px = 20px */
   text-align: center;
   text-shadow: 0 0 30px #40a9ff;
-  box-shadow: 0 0 20px #1890ff;
+
 }
 
 .titulo:hover {

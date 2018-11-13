@@ -87,7 +87,29 @@ class Menudos extends React.Component {
 
   eventorecoClick = (e) => {
     console.log('click ', e);
-    alert(e.key);
+    if(e.key == 'home')
+    {
+     document.getElementById("elemntotitulo").innerHTML='Técnologias Y servicios';
+     document.getElementById("contenidoPagina").innerHTML='<h2>Hola esto es el contenido de la pagina</h2>';
+    }else
+    {
+      if(e.key == "noso")
+      {
+        document.getElementById("elemntotitulo").innerHTML='Conosenos';
+      }else
+       {
+        if(e.key == "Productos")
+         {
+           document.getElementById("elemntotitulo").innerHTML='Productos';
+         }else
+           {
+                       document.getElementById("elemntotitulo").innerHTML='Escrivenos nos pondremos en conctato lo antes posible';
+           }
+       
+       }
+    }
+
+
     this.setState({
       current: e.key,
     });
