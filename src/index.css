@@ -34,12 +34,15 @@
         width: 1800; height: 1800;
 	    background-image: url('/img/header/5.jpg');
 }
+#contenidoImg
+{
+   background-image: url('/img/header/5.jpg');
 
+}
 .titulo {
   font-size: 2em;   /* 2em = 2 x 10px = 20px */
   text-align: center;
   text-shadow: 0 0 30px #40a9ff;
-
 }
 
 .titulo:hover {
@@ -51,3 +54,4 @@
 p {
   font-size: 1.4em; /* 1.4em x 10px = 14px */
 }
+
