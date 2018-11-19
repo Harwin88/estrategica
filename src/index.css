@@ -10,47 +10,100 @@
   color: #000;
 }
 
-#hea-1 {
-        width: 1800; height: 1800;
+
+.fondoCarruselGlobal
+{
+  background-image: url('/img/Pagina/fondo-6.jpg');
+}
+/*#hea-1 {
+       
 	    background-image: url('/img/header/1.jpg');
 }
 
 #hea-2 {
-        width: 1800; height: 1800;
+       
 	    background-image: url('/img/header/2.jpg');
 }
 #hea-3{
-        width: 1800; height: 1800;
+       
    background-image: url('/img/header/3.jpg');
 }
 
 #hea-4 {
-        width: 1800; height: 1800;
+       
 	    background-image: url('/img/header/4.jpg');
   
 }
 
 #hea-5 {
-        width: 1800; height: 1800;
+       
 	    background-image: url('/img/header/5.jpg');
-}
-#contenidoImg
-{
-   background-image: url('/img/header/5.jpg');
+}*/
 
+.claspruebaimgFondo{
+       
+      background-image: url('/img/logos/LogoEstrategica-15.png');
 }
+
+
+#nosotrosIMg {
+      
+	    background-image: url('/img/Pagina/nosotros-0.png');
+}
+
+
 .titulo {
   font-size: 2em;   /* 2em = 2 x 10px = 20px */
   text-align: center;
-  text-shadow: 0 0 30px #40a9ff;
+  text-shadow: 0 0 15px #40a9ff;
 }
 
 .titulo:hover {
-  font-size: 2em;   /* 2em = 2 x 10px = 20px */
+     /* 2em = 2 x 10px = 20px */
   text-shadow: 0 0 30px #40ff9e;
-  box-shadow: 0 0 20px #40ff9e;
+  
 
 }
+
+.tituloicon{
+
+  text-shadow: 0 0 15px #40a9ff;
+}
+
+.tituloicon:hover {
+     /* 2em = 2 x 10px = 20px */
+  text-shadow: 0 0 30px #40ff9e;
+  
+
+}
+
+.iniciologo{
+
+  background-color:#b6cde0;
+  text-shadow: 0 0 15px #40ff9e;
+}
+
+.iniciologo:hover {
+     /* 2em = 2 x 10px = 20px */
+      background-color:#0359a0;
+      text-shadow: 0 0 15px #40a9ff;
+  
+
+}
+.menusColor{
+
+  background-color:#e4fc18;
+  text-shadow: 0 0 15px #40ff9e;
+}
+
+.menusColor:hover {
+     /* 2em = 2 x 10px = 20px */
+      background-color:#f8f9fa;
+      text-shadow: 0 0 15px #40a9ff;
+  
+
+}
+
 p {
   font-size: 1.4em; /* 1.4em x 10px = 14px */
 }

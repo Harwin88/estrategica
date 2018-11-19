@@ -4,11 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
+
   <!--
     manifest.json provides metadata used when your web app is added to the
     homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
   -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
   <!--
     Notice the use of %PUBLIC_URL% in the tags above.
@@ -23,27 +26,39 @@
   
 </head>
 <body>
-    <div id="menusuperior"></div>
-
-    <div id="container" style="padding: 24px"></div>
-    
-    <div id="carruzel" style="padding: 24px, width: 60%, height: 40%"></div>
-      
-    <div id="menudos" style="padding: 24px, width: 60%, height: 40%" ></div>
-
-<div id="titulos" style="padding: 24px, width: 60%, height: 40%" ></div>
+  
+  <!-- <div id="menusuperior"></div>-->
+   <div class="container-fluid">
+  <div id="container" class="iniciologo"></div>
+  <div id="carruzellogoestrategica"></div>
    
-  <div id="contenidoPagina" style="padding: 24px, width: 60%, height: 40%" ></div>
- <div id="nosotrosestra" style="padding: 24px, width: 60%, height: 40%" ></div>
+   <div id="carruzel"></div>
+  
+   <div id="menudos" class="menusColor" style="padding: 24px, width: 60%, height: 40%" ></div>
+  
+   <div id="titulos" style="padding: 24px, width: 60%, height: 40%" ></div>
 
-      <script>
-  var menusuperior = document.getElementById('menusuperior');
-  var mountNode = document.getElementById('container');
-  var carruzel = document.getElementById('carruzel');
-  var whatsappwww = document.getElementById('menudos');
-   var whatsappwww = document.getElementById('titulos');
-   var whatsappwww = document.getElementById('contenidoPagina');
+   <div id="contenidoPagina">
+    
+   </div>
+  
+   <div id="nosotrosestra" style="padding: 24px, width: 60%, height: 40%" ></div>
+  
+   <div id="piedePagina" style="padding: 24px, width: 60%, height: 40%" ></div>
+<div id="formularioConctato" style="padding: 24px, width: 60%, height: 40%" ></div>
+
+<div id="piepagina" style="padding: 24px, width: 60%, height: 40%" ></div>
+</div>
+<script>
+    //var menusuperior = document.getElementById('menusuperior');
+    var mountNode = document.getElementById('container');
+    var carruzel = document.getElementById('carruzel');
+    var whatsappwww = document.getElementById('menudos');
+    var whatsappwww = document.getElementById('titulos');
+    var whatsappwww = document.getElementById('contenidoPagina');
     var whatsappwww = document.getElementById('nosotrosestra');
+    var whatsappwww = document.getElementById('piedePagina');
+    var whatsappwww = document.getElementById('formularioConctato');
 </script>
   <!--
     This HTML file is a template.
@@ -57,5 +72,11 @@
   -->
 
 </body>
+<script type="text/javascript" src="%PUBLIC_URL%/jquery/jquery3.3.1.min.js"></script>
 
+<script type="text/javascript">
+  $(document).ready(function(){
+    alert(455);
+  });
+</script>
 </html>
