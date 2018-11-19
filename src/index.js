@@ -2,9 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import './index.css';
-import PiePagina from './footer.js';
-import timeRelatedForm  from './contactenos.js'
+import './css/index.css';
+import PiePagina from './js/footer.js';
+import timeRelatedForm  from './js/contactenos.js'
 import { Menu, Affix, Alert, Icon, Carousel, Popover, Row, Col, Form, input, Input, DatePicker, TimePicker, Select, Cascader, InputNumber} from 'antd';
 import esES from 'antd/lib/locale-provider/es_ES';
 
@@ -91,9 +91,10 @@ class Menudos extends React.Component {
   eventorecoClick = (e) => {
     console.log('click ', e);
 
-if(e.key == 'home')
+if(e.key == 'Nosotros')
 {
   
+
 ReactDOM.render(
 <Row> 
 <Col span={2}></Col>
@@ -106,11 +107,9 @@ ReactDOM.render(
 </Row>,
 document.getElementById('titulos'));
 
-   //document.getElementById("elemntotitulo").innerHTML='Tecnología y Servicios';
-   //document.getElementById("contenidoPagina").innerHTML='';
 }else
 {
-    if(e.key == "noso")
+    if(e.key == "Servicios")
     {
        ReactDOM.render(
 <Row> 
@@ -118,11 +117,18 @@ document.getElementById('titulos'));
 <Col id='colfondo' span={20}>
 <img src="/img/Pagina/serv-00.png" alt="Smiley face" height="100%" width="100%"/>
 <img src="/img/Pagina/serv-01.png" alt="Smiley face" height="100%" width="100%"/>
-<img src="/img/Pagina/serv-01.png" alt="Smiley face" height="100%" width="100%"/>
+<img src="/img/Pagina/serv-02.png" alt="Smiley face" height="100%" width="100%"/>
+<img src="/img/Pagina/serv-03.png" alt="Smiley face" height="100%" width="100%"/>
+<img src="/img/Pagina/serv-04.png" alt="Smiley face" height="100%" width="100%"/>
+<img src="/img/Pagina/serv-05.png" alt="Smiley face" height="100%" width="100%"/>
+<img src="/img/Pagina/serv-06.png" alt="Smiley face" height="100%" width="100%"/>
+<img src="/img/Pagina/serv-07.png" alt="Smiley face" height="100%" width="100%"/>
+
 </Col>
  <Col span={2}></Col>
 </Row>,
-document.getElementById('titulos'));
+document.getElementById('titulos')); 
+
     }
     else
        {
@@ -130,13 +136,65 @@ document.getElementById('titulos'));
           {
              ReactDOM.render(
 <Row> 
-<Col span={2}></Col>
-<Col id='colfondo' span={20}>
-<img src="/img/Pagina/nosotros-0.png" alt="Smiley face" height="100%" width="100%"/>
-<img src="/img/Pagina/nosotros-1.png" alt="Smiley face" height="100%" width="100%"/>
-<img src="/img/Pagina/nosotros-02.png" alt="Smiley face" height="100%" width="100%"/>
+<Col span={24}>
+<div class="container">
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+      <h1>Portafolio</h1>
+     </div>
+     <div class="col-lg-4"></div>
+</div>
+<div class="row">
+ <div class="col-lg-4"> 
+<img src="/img/portafolio/10.jpg" alt="Hola " class="img-thumbnail" />
+</div>
+<div class="col-lg-4">  
+<img src="/img/portafolio/12.jpg" alt="" class="img-thumbnail" />
+</div>
+<div class="col-lg-4">  
+<img src="/img/portafolio/9.jpg" alt="" class="img-thumbnail" />
+</div>
+</div>
+<div class="row"><div class="col-lg-12"><hr></hr></div></div>
+<div class="row">
+ <div class="col-lg-4"> 
+<img src="/img/portafolio/1.jpg" alt="" class="img-thumbnail" />
+</div>
+<div class="col-lg-4">  
+<img src="/img/portafolio/2.jpg" alt="" class="img-thumbnail" />
+</div>
+<div class="col-lg-4">  
+<img src="/img/portafolio/3.jpg" alt="" class="img-thumbnail" />
+</div>
+</div>
+<div class="row"><div class="col-lg-12"><hr></hr></div></div>
+<div class="row">
+ <div class="col-lg-4"> 
+<img src="/img/portafolio/11.jpg" alt="" class="img-thumbnail" />
+</div>
+<div class="col-lg-4">  
+<img src="/img/portafolio/4.jpg" alt="" class="img-thumbnail" />
+</div>
+<div class="col-lg-4">  
+<img src="/img/portafolio/5.jpg" alt="" class="img-thumbnail" />
+</div>
+</div>
+<div class="row"><div class="col-lg-12"><hr></hr></div></div>
+<div class="row">
+ <div class="col-lg-4"> 
+<img src="/img/portafolio/6.jpg" alt="" class="img-thumbnail" />
+</div>
+<div class="col-lg-4">  
+<img src="/img/portafolio/8.jpg" alt="" class="img-thumbnail" />
+</div>
+<div class="col-lg-4">  
+
+</div>
+</div>
+
+</div>
 </Col>
- <Col span={2}></Col>
 </Row>,
 document.getElementById('titulos'));
           }else
@@ -181,13 +239,13 @@ document.getElementById('titulos'));
 <Menu
            onClick={this.eventorecoClick}
         mode="horizontal" >
-        <Menu.Item key="home">
-          <Icon style={{ fontSize: '26px', color: '#08c' }} type="home" />Inicio.
+        <Menu.Item key="Nosotros">
+          <Icon style={{ fontSize: '26px', color: '#08c' }} type="home" />Nosotros.
         </Menu.Item>
-        <Menu.Item key="noso" >
+        <Menu.Item key="Servicios" >
           <Icon style={{ fontSize: '26px', color: '#08c' }} type="robot" />Servicios.
         </Menu.Item>
-        <Menu.Item key="productos" >
+        <Menu.Item key="Portafolio" >
           <Icon style={{ fontSize: '26px', color: '#08c' }} type="picture" />PortaFolio.
         </Menu.Item>
         <Menu.Item key="contac">

@@ -2,20 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import './header.css';
+import './../css/header.css';
  import { Menu, Icon, Switch } from 'antd';
 
 const { SubMenu } = Menu;
 const MenuItemGroup = Menu.ItemGroup;
-
-
-
-
- 
-
-
-
-
 
 class Menus extends React.Component {
  state = {
