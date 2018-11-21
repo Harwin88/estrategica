@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Menus} from 'antd';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -193,28 +193,7 @@ class RegistrationForm extends React.Component {
       <Col span="8">
     
       </Col>
-     
-      </Row>,
-  <Row>
-      <Col span="4"></Col>
-      <Col span="16">
-      <br/><br/>
-       <h1 class="tituloicon">Comunicate de forma directa usando:</h1>
-      <br/>
-      <br/>
-      <span/><div>
-        <Row><Col span="5"><a class="tituloicon" href="#" target="_blank" rel="noopener noreferrer"><Icon  style={{ fontSize: '56px', color: '#08c' }} theme="outlined"  type="facebook" /><Row>facebook</Row></a></Col>
-        <Col span="5"><a class="tituloicon" href="#" target="_blank" rel="noopener noreferrer"><Icon  style={{ fontSize: '56px', color: '#08c' }} theme="outlined"  type="twitter" /> <Row>twitter</Row></a></Col>
-        <Col span="5"><a class="tituloicon" href="#" target="_blank" rel="noopener noreferrer"><Icon  style={{ fontSize: '56px', color: '#08c' }} theme="outlined"  type="linkedin" /> <Row>linkedin</Row></a></Col>
-        <Col span="5"><a class="tituloicon" href="#" target="_blank" rel="noopener noreferrer"><Icon  style={{ fontSize: '56px', color: '#08c' }} theme="outlined"  type="instagram" /> <Row>instagram</Row></a></Col>
-        <Col span="4"><a class="tituloicon" href="#" target="_blank" rel="noopener noreferrer"><Icon  style={{ fontSize: '56px', color: '#08c' }} theme="outlined"  type="wechat" /> <Row>Whatsapp</Row></a></Col>
-        </Row>
-      </div>
-       </Col>
-      <Col span="4"></Col>
-      </Row>
-
-    );
+      </Row>);
   }
 }
 

@@ -1,13 +1,7 @@
 /* For demo */
-.ant-carousel .slick-slide {
-  text-align: center;
-  height: 160px;
-  line-height: 160px;
-  overflow: hidden;
-}
 
-.ant-carousel .slick-slide h3 {
-  color: #000;
+ h6 {
+  color:  #fff;
 }
 
 
@@ -56,6 +50,7 @@
   font-size: 2em;   /* 2em = 2 x 10px = 20px */
   text-align: center;
   text-shadow: 0 0 15px #40a9ff;
+  text-decoration-color:  #fff;
 }
 
 .titulo:hover {
@@ -68,11 +63,13 @@
 .tituloicon{
 
   text-shadow: 0 0 15px #40a9ff;
+  text-decoration-color:  #fff;
 }
 
 .tituloicon:hover {
      /* 2em = 2 x 10px = 20px */
   text-shadow: 0 0 30px #40ff9e;
+  text-decoration-color:  #fff;
   
 
 }
@@ -92,7 +89,7 @@
 }
 .menusColor{
 
-  background-color:#e4fc18;
+  background-color:#52c41a;
   text-shadow: 0 0 15px #40ff9e;
 }
 
@@ -108,3 +105,8 @@ p {
   font-size: 1.4em; /* 1.4em x 10px = 14px */
 }
 
+.boxdivbody{
+    box-shadow: 2px 2px 10px #666;          /* Sombra normal */
+    //box-shadow: 5px -5px 0 2px #444;        /* Sombra superior sin desenfoque */
+   // box-shadow: 5px 5px 25px #222 inset;    /* Sombra interior */
+}
