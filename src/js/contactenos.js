@@ -1,202 +1,101 @@
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Menus} from 'antd';
+class Contact extends React.Component {
 
-const FormItem = Form.Item;
-const Option = Select.Option;
-const AutoCompleteOption = AutoComplete.Option;
-const { TextArea } = Input;
-const residences = [{
-  value: 'zhejiang',
-  label: 'Zhejiang',
-  children: [{
-    value: 'hangzhou',
-    label: 'Hangzhou',
-    children: [{
-      value: 'xihu',
-      label: 'West Lake',
-    }],
-  }],
-}, {
-  value: 'jiangsu',
-  label: 'Jiangsu',
-  children: [{
-    value: 'nanjing',
-    label: 'Nanjing',
-    children: [{
-      value: 'zhonghuamen',
-      label: 'Zhong Hua Men',
-    }],
-  }],
-}];
-
-class RegistrationForm extends React.Component {
-  state = {
-    confirmDirty: false,
-    autoCompleteResult: [],
-  };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }else{
-        alert('hola'+ values);
-      }
-    });
+constructor(args){
+  super(args)
+  this.state ={
+    name:'',
+    Motivo:'',
+    Empresa:'',
+    Correo:'',
+    Mensaje:''
   }
 
-  handleConfirmBlur = (e) => {
-    const value = e.target.value;
-    this.setState({ confirmDirty: this.state.confirmDirty || !!value });
-  }
+}
 
-  compareToFirstPassword = (rule, value, callback) => {
-    const form = this.props.form;
-    if (value && value !== form.getFieldValue('password')) {
-      callback('Two passwords that you enter is inconsistent!');
-    } else {
-      callback();
-    }
-  }
-
-  validateToNextPassword = (rule, value, callback) => {
-    const form = this.props.form;
-    if (value && this.state.confirmDirty) {
-      form.validateFields(['confirm'], { force: true });
-    }
-    callback();
-  }
-
-  handleWebsiteChange = (value) => {
-    let autoCompleteResult;
-    if (!value) {
-      autoCompleteResult = [];
-    } else {
-      autoCompleteResult = ['.com', '.org', '.net'].map(domain => `${value}${domain}`);
-    }
-    this.setState({ autoCompleteResult });
-  }
+onChange(e)
+{
+  this.setState({
+    [e.target.name]:e.target.value
+  })
+}
 
   render() {
-    const { getFieldDecorator } = this.props.form;
-    const { autoCompleteResult } = this.state;
-
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 },
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 },
-      },
-    };
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0,
-        },
-        sm: {
-          span: 16,
-          offset: 8,
-        },
-      },
-    };
-    const prefixSelector = getFieldDecorator('prefix', {
-      initialValue: '86',
-    })(
-      <Select style={{ width: 70 }}>
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
-      </Select>
-    );
-
-    const websiteOptions = autoCompleteResult.map(website => (
-      <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
-    ));
 
     return (
-    <Row>
-      <Col span="16"><Form onSubmit={this.handleSubmit}>
-      <Row>
-      <Col span="9">
-      </Col>
-       <Col span="12">
-       <br />
-          <br />
-             <br />
-       <h1>Complete el formulario a continuación y háganos saber acerca de sus productos o necesidades de servicios.</h1>
-      </Col>
-       <Col span="3">
-      </Col>
-      </Row>
-        <FormItem
-          {...formItemLayout}
-          label="E-mail"
-        >
-          {getFieldDecorator('email', {
-            rules: [{
-              type: 'email', message: 'el valor ingresado no coresponde a E-mail!',
-            }, {
-              required: true, message: 'este campo es requerido E-mail!',
-            }],
-          })(
-            <Input />
-          )}
-        </FormItem>
-       
-        <FormItem
-          {...formItemLayout}
-          label={(
-            <span>
-              Nombre Completo&nbsp;
-              <Tooltip title="Cual es tunombre completo?">
-                <Icon type="question-circle-o" />
-              </Tooltip>
-            </span>
-          )}
-        >
-          {getFieldDecorator('nickname', {
-            rules: [{ required: true, message: 'Por favor Ingrese su nombre completo!', whitespace: true }],
-          })(
-            <Input />
-          )}
-        </FormItem>
-        <FormItem
-          {...formItemLayout}
-          label="Mensaje"
-        >
-          {getFieldDecorator('Mensaje', {
-            rules: [{ required: true, message: 'Ingrese un mensaje describiendo sus requerimientos, no es necesario estenderse mucho!' }],
-          })(
-            <AutoComplete
-              //dataSource={}
-              //onChange={}
-              placeholder="Mensaje"
-            >
-             <TextArea autosize={{ minRows: 2, maxRows: 6 }} />
-            </AutoComplete>
-          )}
-        </FormItem>
-       
-        <FormItem {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit">Register</Button>
-        </FormItem>
-      </Form>
-      </Col>
-      <Col span="8">
-    
-      </Col>
-      </Row>);
+    <div class="row">
+    <div class="col-md-4">
+      
+    </div>
+    <div class="col-md-4">
+      <h1>Nos podremos en contacto contigo en la menor brevedad posible.</h1>
+    </div>
+    <div class="col-md-4">
+     
+    </div>
+ 
+     <div class="container">
+            <form role="form" id="Formulario">
+                <div class="form-group">
+                    <label class="control-label" htmlfor="Nombre">Nombres</label>
+                    <input 
+                      value={this.state.name}
+                      onChange={this.onChange.bind(this)}
+                      type="text"
+                      class="form-control"
+                      id="Nombre"
+                      name="name"
+                      placeholder="Introduzca su nombre" 
+                      required autofocus />
+                </div>            
+                <div class="form-group">
+                    <label class="control-label" htmlfor="Motivo">Motivo de Contacto</label>
+                    <select 
+                      value={this.state.Motivo}
+                      onChange={this.onChange.bind(this)}
+                      name="Motivo" class="form-control">
+                        <option value="Consulta General">Consulta General</option>
+                        <option value="Realizar Pedido">Realizar Pedido</option>
+                        <option value="Informe un problema">Informe un problema</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" htmlhtmlfor="Empresa">Empresa</label>
+                    <input 
+                    value={this.state.Empresa}
+                      onChange={this.onChange.bind(this)}
+                    type="text" class="form-control" id="Empresa" name="Empresa" placeholder="Introduzca el nombre de su empresa" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" htmlfor="Correo">Dirección de Correo Electrónico</label>
+                    <input 
+                    value={this.state.Correo}
+                      onChange={this.onChange.bind(this)}
+                    type="email" class="form-control" id="Correo" name="Correo" placeholder="Introduzca su correo electrónico" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" htmlfor="Mensaje">Mensaje</label>
+                    <textarea 
+                      value={this.state.Mensaje}
+                      onChange={this.onChange.bind(this)}
+                     rows="5" cols="30" class="form-control" id="Mensaje" name="Mensaje" placeholder="Introduzca su mensaje" required ></textarea>
+                </div>
+                <div class="form-group">                
+                    <input type="submit" id="sudmigg" class="btn btn-primary" value="Enviar" />
+                    <input type="reset" class="btn btn-default" value="Limpiar"/>                
+                </div>
+                <div id="respuesta"></div>
+            </form>
+        </div>
+
+           </div>    
+
+    );
   }
 }
 
-export default RegistrationForm;
-
-
+export default Contact;
