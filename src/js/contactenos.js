@@ -21,7 +21,13 @@ onChange(e)
 {
   this.setState({
     [e.target.name]:e.target.value
+
   })
+}
+
+onClickAjax = (e) => {
+var valor= this.state.name;
+alert(valor);
 }
 
   render() {
@@ -85,13 +91,13 @@ onChange(e)
                      rows="5" cols="30" class="form-control" id="Mensaje" name="Mensaje" placeholder="Introduzca su mensaje" required ></textarea>
                 </div>
                 <div class="form-group">                
-                    <input type="submit" id="sudmigg" class="btn btn-primary" value="Enviar" />
+                    <input type="button" id="sudmigg" class="btn btn-primary" value="Enviar" onClick={this.onClickAjax} />
                     <input type="reset" class="btn btn-default" value="Limpiar"/>                
                 </div>
                 <div id="respuesta"></div>
             </form>
         </div>
-
+{JSON.stringify(this.state)}
            </div>    
 
     );

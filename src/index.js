@@ -15,7 +15,12 @@ import { Form, Input, Affix, Menu, Alert, Icon, Carousel, Popover, Row, Col, Dat
 import esES from 'antd/lib/locale-provider/es_ES';
 
 //const Contactenos = Form.create()(Contactenostrr);
-
+ const content =(
+      <div>
+        <a href="https://www.facebook.com/EstrategicaMyP/" target="_blank" rel="noopener noreferrer"><Icon  style={{ fontSize: '56px', color: '#08c' }} theme="outlined"  type="facebook" /></a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><Icon  style={{ fontSize: '56px', color: '#08c' }} theme="outlined"  type="twitter" /></a>
+      </div>
+    );
 
 const formItemLayout = {
   labelCol: {
@@ -41,6 +46,10 @@ class App extends React.Component {
       current: e.key,
     });
   } 
+
+
+
+
   
   render() {
 
@@ -74,5 +83,19 @@ ReactDOM.render(<App />, document.getElementById('container'));
 ReactDOM.render(<Menudos />, document.getElementById('menudos'));
 ReactDOM.render(<PiePagina />, document.getElementById('piepagina'));
 ReactDOM.render(<Carouselsuperio />, document.getElementById('carruzellogoestrategica'));
+ReactDOM.render(<Row>
+                 <Col span="24">
+               <Icon  style={{ fontSize: '56px'}} theme="outlined"  type="facebook" /></Col></Row>,
+                  document.getElementById('face'));
+
+  ReactDOM.render(<Row>
+                 <Col span="24">
+               <Icon  style={{ fontSize: '56px' }} theme="outlined"  type="twitter" /></Col></Row>,
+                  document.getElementById('ist'));
+
+      ReactDOM.render(<Row>
+                 <Col span="24">
+               <Icon  style={{ fontSize: '56px' }} theme="outlined"  type="instagram" /></Col></Row>,
+                  document.getElementById('tuw'));
+
       
-          
